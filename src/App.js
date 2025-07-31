@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import AppRouter from './components/AppRouter.js'
 import { observer } from 'mobx-react-lite'
 import { useContext, useEffect, useState } from 'react'
@@ -39,7 +39,7 @@ const App = observer(() => {
     }
 
     return (
-        <BrowserRouter>
+        <HashRouter>
             <ErrorModal
                 show={error.showError}
                 handleClose={() => error.setShowError(false)}
@@ -47,7 +47,7 @@ const App = observer(() => {
             />
             <Header />
             <AppRouter />
-        </BrowserRouter>
+        </HashRouter>
     )
 })
 
