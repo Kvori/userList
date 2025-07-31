@@ -40,14 +40,13 @@ const App = observer(() => {
 
     return (
         <BrowserRouter>
-            <AppRouter>
-                <ErrorModal
-                    show={error.showError}
-                    handleClose={() => error.setShowError(false)}
-                    error={error.error}
-                />
-                <Header />
-            </AppRouter>
+            <ErrorModal
+                show={error.showError}
+                handleClose={() => error.setShowError(false)}
+                error={error.error}
+            />
+            <Header />
+            <AppRouter />
         </BrowserRouter>
     )
 })
