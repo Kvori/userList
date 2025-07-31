@@ -60,7 +60,7 @@ const Auth = () => {
 
     const onSubmit = async ({ email, password, name }) => {
         setServerError('')
-        setIsLoading(true) // ⏳ включаем лоадер
+        setIsLoading(true)
         try {
             const data = isRegister
                 ? await registration(email, name, password)
@@ -76,7 +76,7 @@ const Auth = () => {
             error.setShowError(true)
             error.setError(e.message)
         } finally {
-            setIsLoading(false) // ✅ выключаем лоадер
+            setIsLoading(false)
         }
     }
 
